@@ -38,7 +38,7 @@ if ($connection->getLastHttpCode() == 200) {
 
     // Reply with Media
     $tweet = '@' . $status->user->screen_name . ' ' . randomTweet('tweet_reply.txt');
-    $media = $connection->upload('media/upload', ['media' => 'zetbot.jpg']);
+    $media = $connection->upload('media/upload', ['media' => 'file.jpg']);
     $data = [
       'in_reply_to_status_id' => $status->id,
       'status' => $tweet,
